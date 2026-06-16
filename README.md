@@ -1,4 +1,4 @@
-# CanarinhoLives
+# LivesDoZé
 
 Multi-platform livestream grid viewer for **YouTube** and **Kick.com** — watch multiple channels simultaneously with automatic live detection, embedded chat, and a password-protected admin panel.
 
