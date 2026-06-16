@@ -1,0 +1,10 @@
+{
+  "name": "canarinholives",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Grade automática de transmissões do YouTube por canal + chat (sem API)",
+  "dependencies": {
+    "@neondatabase/serverless": "^1.1.0"
+  }
+}

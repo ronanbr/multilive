@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>LivesDoZé — Painel</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="admin-wrap">
+    <div class="card">
+      <h1><b>Lives</b>DoZé — Painel</h1>
+      <p class="hint">Cadastre os <b>canais</b>. O app detecta sozinho quando cada um está ao vivo e mostra a transmissão (com chat) pra galera.</p>
+
+      <label class="field">
+        <span>Senha do painel</span>
+        <input class="inp" id="password" type="password" placeholder="sua senha" autocomplete="current-password" />
+      </label>
+    </div>
+
+    <div class="card">
+      <div id="rows"></div>
+      <div class="toolbar">
+        <button class="btn" id="add">+ Adicionar canal</button>
+        <button class="btn" id="reload">↻ Carregar atual</button>
+        <button class="btn primary" id="save">Salvar e publicar</button>
+      </div>
+      <div id="msg"></div>
+      <p class="muted" style="margin-top:14px">
+        Formatos aceitos no campo do canal: <code>youtube.com/@handle</code>,
+        <code>youtube.com/channel/UC...</code>, <code>@handle</code>, ID <code>UC...</code>.<br/>
+        Para fixar uma live específica: <code>youtube.com/watch?v=ID</code>,
+        <code>youtu.be/ID</code> ou <code>youtube.com/live/ID</code>.
+        Se um canal tiver duas lives simultâneas, adicione cada link separado.
+      </p>
+    </div>
+  </div>
+
+  <script src="/ze.js"></script>
+</body>
+</html>

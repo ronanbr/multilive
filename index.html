@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>LivesDoZé — Caravana na Copa</title>
+  <meta name="description" content="Assista varias transmissões da Copa ao mesmo tempo." />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div id="app">
+    <header class="topbar">
+      <div class="logo"><b>Lives</b><span>Do</span><b>Zé</b></div>
+      <div class="count" id="count"></div>
+      <div class="spacer"></div>
+      <button class="btn" id="reloadBtn" title="Atualizar página">🔄 Atualizar</button>
+      <button class="btn" id="chatBtn">💬 Chat</button>
+      <div class="menu-wrap">
+        <button class="btn" id="channelsBtn">Canais ▾</button>
+        <div class="panel hidden" id="channelsPanel">
+          <div class="panel-head">
+            <span>Canais</span>
+            <button class="btn sm" id="refreshBtn">↻ Atualizar</button>
+          </div>
+          <div id="channelsList"></div>
+        </div>
+      </div>
+    </header>
+
+    <main class="layout">
+      <section class="stage">
+        <div class="grid" id="grid"></div>
+        <div class="empty" id="empty" style="display:none">
+          <div class="box">
+            <h2 id="emptyTitle">Nenhum canal disponível</h2>
+            <p id="emptyMsg">Volte mais tarde.</p>
+          </div>
+        </div>
+      </section>
+
+      <aside class="chat hidden" id="chatPanel">
+        <div class="chat-head">
+          <select id="chatSelect"><option disabled selected>Nenhuma live ativa</option></select>
+          <button class="btn sm" id="chatCloseBtn">✕</button>
+        </div>
+        <div class="chat-body">
+          <iframe id="chatFrame" allow="clipboard-write" referrerpolicy="origin" frameborder="0"></iframe>
+        </div>
+      </aside>
+    </main>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>
