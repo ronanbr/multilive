@@ -281,13 +281,17 @@ function createTile(channel) {
   hideBtn.textContent = '✕';
   hideBtn.addEventListener('click', () => setActive(id, false));
 
-  const muteBtn = document.createElement('button');
-  muteBtn.className = 'mute-btn';
-  muteBtn.textContent = '🔇';
-  muteBtn.title = 'Mudo — clique para ouvir este';
-  muteBtn.addEventListener('click', (e) => { e.stopPropagation(); toggleAudio(id); });
-
-  tile.append(iframe, label, muteBtn, hideBtn);
+  // O ícone de som só faz sentido no Kick (troca de áudio via reload do iframe).
+  // No YouTube confunde, então não é exibido.
+  tile.append(iframe, label, hideBtn);
+  if (channel.kickSlug) {
+    const muteBtn = document.createElement('button');
+    muteBtn.className = 'mute-btn';
+    muteBtn.textContent = '🔇';
+    muteBtn.title = 'Mudo — clique para ouvir este';
+    muteBtn.addEventListener('click', (e) => { e.stopPropagation(); toggleAudio(id); });
+    tile.insertBefore(muteBtn, hideBtn);
+  }
   grid.appendChild(tile);
 
   // Kick: sem API de JS — mostra o player direto (sempre mudo) e usa o popout de chat.
