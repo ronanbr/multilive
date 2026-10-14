@@ -72,7 +72,7 @@ function normalizeChannel(c) {
 
 // --- chat ---
 function chatUrl(videoId) {
-  return `https://www.youtube.com/live_chat?v=${videoId}&embed_domain=${location.hostname}`;
+  return `https://www.youtube.com/live_chat?v=${videoId}&dark_theme=1&embed_domain=${location.hostname}`;
 }
 function kickChatUrl(slug) {
   return `https://kick.com/popout/${slug}/chat`;
